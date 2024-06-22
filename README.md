@@ -53,7 +53,7 @@ AdBlitz is a web application focused on providing users with a seamless and pers
 ## Next Steps 🚦
 
 - **User Base Expansion**: Continuously grow the user base to reach a wider audience.
-- **Enhancing UI**: Implement more animations and effects to elevate the user experience.
+- **Enhancing UI**: Implement more animations and effects to elevate the user experience.          
 - **Diversification of Categories**: Expand the range of product categories to cater to diverse user preferences.
 - **Data Analytics Utilization**: Utilize data analytics to gain insights into user behavior and preferences.
 - **Continuous Innovation and Quality Control**: Ensure ongoing innovation and maintain high-quality standards to meet user expectations.
