@@ -8,9 +8,11 @@ const UserProvider = ({ children }) => {
   const user = JSON.parse(localStorage.getItem("users")) || {};
   const [isLoggedIn, setIsLoggedIn] = useState(Object.keys(user).length > 0);
   // Initialize location and setLocation with useState
-  const [location, setLocation] = useState(localStorage.getItem('selectedCity') || null)
-  console.log(location);
- //** All Product **
+  const [location, setLocation] = useState(
+    localStorage.getItem("selectedCity") || null
+  );
+
+  //** All Product **
   const [allProduct, setAllProduct] = useState([]);
   const getAllProduct = async () => {
     try {
@@ -29,12 +31,13 @@ const UserProvider = ({ children }) => {
     }
   };
 
-
-
   useEffect(() => {
-    getAllProduct();
-  }, []);
+    const fetchAllProduct = async () => {
+      await getAllProduct();
+    };
 
+    fetchAllProduct();
+  }, []);
 
   return (
     <UserContext.Provider

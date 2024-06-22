@@ -1,14 +1,21 @@
-import React, { useContext , useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../Contexts/userContext";
 import { useNavigate } from "react-router-dom";
 import Card from "./Card";
 
 const HomePageCards = () => {
-  const { allProduct, location , getAllProduct} = useContext(UserContext);
+  const { allProduct, location, getAllProduct } = useContext(UserContext);
   const navigate = useNavigate();
+
   useEffect(() => {
+    // const fetchAllProduct = async () => {
+    //   await getAllProduct();
+    // };
+    // fetchAllProduct();
     getAllProduct();
   }, [location]);
+
+  console.log(allProduct);
 
   // Get products according to location
   const locProd = allProduct.filter((item) => item.city === location);
@@ -25,5 +32,3 @@ const HomePageCards = () => {
 };
 
 export default HomePageCards;
-
-
